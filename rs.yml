@@ -1,0 +1,32 @@
+---
+apiVersion : apps/v1
+kind: ReplicaSet
+metadata:
+  name: myrs
+spec:
+  replicas: 3
+  selector :
+    matchLabels:
+      app : zomato
+  template :
+    metadata :
+      name: flm
+      labels :
+        app: zomato
+    spec:
+      containers:
+        - name: cont2
+          image: shaikmustafa/mygame
+          ports:
+           - containerPort: 80
+
+
+
+
+
+
+
+~
+~
+~
+~
