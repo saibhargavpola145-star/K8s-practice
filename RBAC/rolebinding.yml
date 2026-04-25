@@ -1,0 +1,14 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: myrb1
+  namespace: dev
+subjects:
+  - kind: User
+    name: mustafa
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: devrole
+  apiGroup: rbac.authorization.k8s.io
