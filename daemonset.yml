@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: monitor
+spec:
+  selector:
+    matchLabels:
+      app: spy
+  template:
+    metadata:
+      name: mytemplate
+      labels:
+        app: spy
+    spec:
+     containers:
+       - name: cont4
+         image : shaikmustafa/paytm:movie
+         ports:
+          - containerPort: 80
