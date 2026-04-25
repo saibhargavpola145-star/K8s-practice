@@ -1,0 +1,22 @@
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+spec:
+  containers:
+    - name : cont2
+      image: shaikmustafa/paytm:movie
+      ports:
+        - containerPort: 80
+      envFrom:
+        - configMapRef:
+            name: cm4
+        - configMapRef:
+            name: cm3
+
+~
+~
+~
+~
