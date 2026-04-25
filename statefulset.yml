@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mydb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: db
+  template:
+    metadata:
+      name: mytemplate
+      labels:
+        tier: db
+    spec:
+     containers:
+       - name: cont2
+         image: shaikmustafa/paytm:bank
+         ports:
+           - containerPort: 80
+
+
